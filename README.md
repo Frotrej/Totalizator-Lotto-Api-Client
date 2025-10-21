@@ -1,0 +1,1 @@
+# Totalizator Lotto Api Client
