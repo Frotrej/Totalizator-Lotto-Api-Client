@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Totalizator_Lotto_Api_Client
+namespace Totalizator_Lotto_Api_Client.Other
 {
 	internal class TestJsonApiGet
 	{
