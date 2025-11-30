@@ -1,4 +1,7 @@
 ﻿using System.Net.Http;
+using Totalizator_Lotto_Api_Client.ApiCalls;
+using Totalizator_Lotto_Api_Client.Other;
+using Totalizator_Lotto_Api_Client.Utils;
 
 namespace Totalizator_Lotto_Api_Client
 {
@@ -6,15 +9,12 @@ namespace Totalizator_Lotto_Api_Client
 	{
 		static async Task Main(string[] args)
 		{
-			string endpoint = "api/open/v1/lotteries/info/next-draw?gameType=Lotto";
-			string? jsonResponse = string.Empty;
-
 			HttpClient myHttpClient = PrepareHttpClient.GetHttpClient();
 
-			//zapytanie do API o najlbizsze losowanie Lotto
+			//jeżeli nagłówki są poprawnie ustawione (jest secret key)
 			if ( myHttpClient.DefaultRequestHeaders.Any())
 			{
-				jsonResponse = await HttpRequestHelper.GetJsonAsync(myHttpClient, endpoint);
+				string jsonResponse = await NextDraw.GetNextGameDraw(myHttpClient);
 
 				Console.WriteLine(jsonResponse);
 			}
@@ -22,8 +22,6 @@ namespace Totalizator_Lotto_Api_Client
 	}
 }
 
-
-// api/open/v1/lotteries/info/game-jackpot
 
 
 

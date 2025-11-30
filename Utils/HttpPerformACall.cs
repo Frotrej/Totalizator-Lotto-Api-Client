@@ -2,9 +2,9 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Totalizator_Lotto_Api_Client
+namespace Totalizator_Lotto_Api_Client.Utils
 {
-	public static class HttpRequestHelper
+	public static class HttpPerformACall
 	{
 		public static async Task<string> GetJsonAsync(HttpClient client, string endpoint)
 		{

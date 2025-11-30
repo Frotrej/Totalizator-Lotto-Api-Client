@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Totalizator_Lotto_Api_Client
+namespace Totalizator_Lotto_Api_Client.Utils
 {
 	internal static class PrepareHttpClient
 	{
