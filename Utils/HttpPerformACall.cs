@@ -2,7 +2,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Totalizator_Lotto_Api_Client.ApiCalls
+namespace Totalizator_Lotto_Api_Client.Utils
 {
 	public static class HttpPerformACall
 	{

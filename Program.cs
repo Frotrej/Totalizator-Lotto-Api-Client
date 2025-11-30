@@ -11,11 +11,10 @@ namespace Totalizator_Lotto_Api_Client
 		{
 			HttpClient myHttpClient = PrepareHttpClient.GetHttpClient();
 
-
 			//jeżeli nagłówki są poprawnie ustawione (jest secret key)
 			if ( myHttpClient.DefaultRequestHeaders.Any())
 			{
-				string jsonResponse = await NextLottoDraw.GetNextLottoDraw(myHttpClient);
+				string jsonResponse = await NextDraw.GetNextGameDraw(myHttpClient);
 
 				Console.WriteLine(jsonResponse);
 			}
@@ -23,8 +22,6 @@ namespace Totalizator_Lotto_Api_Client
 	}
 }
 
-
-// api/open/v1/lotteries/info/game-jackpot
 
 
 
