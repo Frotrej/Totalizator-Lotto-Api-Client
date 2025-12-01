@@ -47,21 +47,17 @@
 				Console.WriteLine("Niepoprawny wybór. Spróbuj ponownie:");
 
 				userInput = Console.ReadLine();
-			} 
+			}
 
 			return userInput;
 		}
 
 		private static bool ValidateUserInput(string userInput)
 		{
-			for (int i = 0; i < gameTypes.Length; i++)
-			{
-				if (userInput == gameTypes[i])
-				{
-					return true;
-				}
-			}
-			return false;
+			if (gameTypes.Contains(userInput))
+				return true;
+			else
+				return false;
 		}
 	}
 }
