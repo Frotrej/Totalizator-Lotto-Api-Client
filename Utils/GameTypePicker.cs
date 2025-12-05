@@ -54,10 +54,7 @@
 
 		private static bool ValidateUserInput(string userInput)
 		{
-			if (gameTypes.Contains(userInput))
-				return true;
-			else
-				return false;
+			return gameTypes.Contains(userInput) ? true : false;
 		}
 	}
 }
