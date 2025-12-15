@@ -1,7 +1,9 @@
 ﻿using System.Net.Http;
+using System.Text.Json;
 using Totalizator_Lotto_Api_Client.ApiCalls;
 using Totalizator_Lotto_Api_Client.Other;
 using Totalizator_Lotto_Api_Client.Utils;
+using Totalizator_Lotto_Api_Client.Utils.DataPresentation;
 
 namespace Totalizator_Lotto_Api_Client
 {
@@ -16,7 +18,8 @@ namespace Totalizator_Lotto_Api_Client
 			{
 				string jsonResponse = await NextDraw.GetNextGameDraw(myHttpClient);
 
-				Console.WriteLine(jsonResponse);
+				DataPresentation showData = JsonSerializer.Deserialize<DataPresentation>(jsonResponse)!;
+				showData.ShowNextDraw();
 			}
 		}
 	}
